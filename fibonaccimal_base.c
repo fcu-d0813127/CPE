@@ -42,7 +42,7 @@ Fibonacci FindFibonaccimalBase(Fibonacci fib, int num) {
     sum = fib.array[i];
     fib_bit.array[bit_count] = 1;
     bit_count++;
-    // j > 1, 0, 1 are excluded.
+    // j > 1, because 0, 1 are excluded.
     for (int j = i - 1; j > 1; j--, bit_count++) {
       if (sum + fib.array[j] <= num && fib_bit.array[bit_count - 1] != 1) {
         sum += fib.array[j];
